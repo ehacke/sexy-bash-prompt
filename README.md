@@ -1,72 +1,19 @@
-# sexy-bash-prompt [![Build status](https://travis-ci.org/twolfson/sexy-bash-prompt.png?branch=master)](https://travis-ci.org/twolfson/sexy-bash-prompt)
+# sexy-bash-prompt 
+Forked from https://github.com/twolfson/sexy-bash-prompt for my own preferences. The only change so far is to replace the user ID and hostname in the prompt with the docker workspace name.
 
 [Bash][bash] prompt with colors, git statuses, and git branches.
 
-Providing a unique symbol for every combination of a dirty, unpulled, and unpushed `git` branch.
+Providing a unique symbol for every combination of a dirty, unpulled, and unpushed `git` branch. (not all are shown)
 
 ![sexy-bash-prompt screenshot][screenshot]
 
 [screenshot]: screenshot.png
 
-Forked from [a gist by gf3][sexy-bash-orig].
-
-[sexy-bash-orig]: https://gist.github.com/gf3/306785/a35d28b6bdd0f7c54318cce510738438f04dabaa
-
-### Do you like `sexy-bash-prompt`?
-[Support us via gratipay][gratipay] or [spread word on Twitter][twitter]
-
-[gratipay]: https://gratipay.com/sexybashprompt/
-[twitter]: https://twitter.com/intent/tweet?text=Bash%20prompt%20with%20colors%2C%20git%20statuses%2C%20and%20git%20branches&url=https%3A%2F%2Fgithub.com%2Ftwolfson%2Fsexy-bash-prompt&via=sexybashprompt
-
 ## Installation
 One line install:
 
 ```bash
-(cd /tmp && git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
-```
-
-### My colors don't look as advertised
-If you are seeing a screen like this:
-
-![Bad TERM config](docs/bad_term.png)
-
-Then, your `TERM` environment variable may never have been configured. Run the script below to prefix our prompt with a `TERM` setup
-
-```bash
-cat > /tmp/.bash_prompt_term <<EOF
-#!/usr/bin/env bash
-# Determine what type of terminal we are using for \`tput\`
-if [[ \$COLORTERM = gnome-* && \$TERM = xterm ]]  && infocmp gnome-256color >/dev/null 2>&1; then export TERM=gnome-256color
-elif [[ \$TERM != dumb ]] && infocmp xterm-256color >/dev/null 2>&1; then export TERM=xterm-256color
-fi
-
-EOF
-chmod +x /tmp/.bash_prompt_term
-cat ~/.bash_prompt >> /tmp/.bash_prompt_term
-cp /tmp/.bash_prompt_term ~/.bash_prompt
-rm /tmp/.bash_prompt_term
-```
-
-### Manual install
-```bash
-$ # Clone the repository
-$ git clone --depth 1 https://github.com/twolfson/sexy-bash-prompt
-Cloning into 'sexy-bash-prompt'...
-...
-Resolving deltas: 100% (13/13), done.
-$ # Go into the directory
-$ cd sexy-bash-prompt
-$ # Install the script
-$ make install
-# Copying .bash_prompt to ~/.bash_prompt
-cp --force .bash_prompt ~/.bash_prompt
-# Adding ~/.bash_prompt to ~/.bashrc
-echo ". ~/.bash_prompt" >> ~/.bashrc
-# twolfson/sexy-bash-prompt installation complete!
-$ # Rerun your ~/.bashrc
-$ source ~/.bashrc
-todd at Euclid in ~/github/sexy-bash-prompt on master
-$ # Your PS1 should now look like this!
+(cd /tmp && git clone --depth 1 https://github.com/ehacke/sexy-bash-prompt && cd sexy-bash-prompt && make install) && source ~/.bashrc
 ```
 
 ## Configuration
