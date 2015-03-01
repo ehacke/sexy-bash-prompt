@@ -9,7 +9,7 @@ install:
 	@# Run install script
 	./install.bash
 
-	@echo "# twolfson/sexy-bash-prompt installation complete!"
+	@echo "# ehacke/sexy-bash-prompt installation complete!"
 	exit 0
 
 install-link:
@@ -19,7 +19,7 @@ install-link:
 	@# Run install script
 	./install.bash
 
-	@echo "# twolfson/sexy-bash-prompt installation complete!"
+	@echo "# ehacke/sexy-bash-prompt installation complete!"
 	exit 0
 
 clean:
