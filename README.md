@@ -1,5 +1,7 @@
 # sexy-bash-prompt 
-Forked from https://github.com/twolfson/sexy-bash-prompt for my own preferences. The only change so far is to replace the user ID and hostname in the prompt with the docker workspace name.
+
+- Forked from https://github.com/twolfson/sexy-bash-prompt for my own preferences. 
+- The only change so far is to replace the user ID and hostname in the prompt with the docker workspace name.
 
 [Bash][bash] prompt with colors, git statuses, and git branches.
 
